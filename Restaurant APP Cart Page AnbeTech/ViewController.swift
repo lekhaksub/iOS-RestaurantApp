@@ -49,8 +49,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         title = "My Cart"
         
+//        This shows the user's information
         userInfo.text = "Shubham Lekhak"
         deliveryInfo.text = "Delivery Location: Kalopul, Radramati marg, Kathmandu-05(Near Best Venue)"
+//        This calculates the total price of the cart
         var total: Double = 0
         for item in cartItems {
             total += (item.price * Double(item.quantity) * 1.13)
