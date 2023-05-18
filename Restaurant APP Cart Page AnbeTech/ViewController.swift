@@ -17,16 +17,18 @@ struct CartItem {
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
    
-    // This label will display the total price
+//     This label will display the total price
     @IBOutlet weak var totalPrice: UILabel!
     
-    // These labels will display User's Name and delivery location
+//     These labels will display User's Name and delivery location
     @IBOutlet weak var userInfo: UILabel!
     @IBOutlet weak var deliveryInfo: UILabel!
     
-    var selectedRow: CartItem?
+    var selectedRowData: CartItem?
+    var total: Double = 0
 
-    // This array will contain all the list of items in the cart
+
+//     This array will contain all the list of items in the cart
     var cartItems: [CartItem] = [
         CartItem(image: UIImage(named: "pizza")!, name: "Pizza", price: 1000, quantity: 1),
         CartItem(image: UIImage(named: "biryani")!, name: "Chicken Biryani", price: 800, quantity: 1),
@@ -52,19 +54,24 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 //        This shows the user's information
         userInfo.text = "Shubham Lekhak"
         deliveryInfo.text = "Delivery Location: Kalopul, Radramati marg, Kathmandu-05(Near Best Venue)"
+        calculateTotal()
+    }
+    
+    
 //        This calculates the total price of the cart
-        var total: Double = 0
+    func calculateTotal() {
         for item in cartItems {
             total += (item.price * Double(item.quantity) * 1.13)
         }
         totalPrice.text = "Total:  Rs. \(total)"
     }
     
-    
+//    This function will display number of rows of items
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return cartItems.count
     }
     
+//    This function will display contents of items in their specific row
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cart", for: indexPath) as! CartItemTableViewCell
@@ -79,22 +86,23 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return cell
     }
     
-    
+//    This function will set height for rows
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 140
     }
 
+//    This function will open a new view for the selected row
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let item = cartItems[indexPath.row]
-        selectedRow = item
+        selectedRowData = item
         performSegue(withIdentifier: "ToEditItemVC", sender: self)
     }
     
-    
+//    This function will link the data of selected row between two views
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let vc = segue.destination as! EditItemsViewController
-        vc.rowData = self.selectedRow
+        let destinationVC = segue.destination as! EditItemsViewController
+        destinationVC.rowData = self.selectedRowData
     }
 
 }

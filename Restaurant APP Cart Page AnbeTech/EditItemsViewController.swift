@@ -20,6 +20,7 @@ class EditItemsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        checks if rowData received data from other view
         if let rowDataUnwrapped = rowData {
             
             itemImage.image = rowDataUnwrapped.image
@@ -31,10 +32,5 @@ class EditItemsViewController: UIViewController {
             itemQuantity.text = "Quantity: \(String(rowDataUnwrapped.quantity))"
             view.backgroundColor = .systemGray6
         }
-        
-        
-        
     }
-
-
 }
