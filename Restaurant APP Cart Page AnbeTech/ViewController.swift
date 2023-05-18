@@ -94,6 +94,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 //    This function will open a new view for the selected row
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        
         let item = cartItems[indexPath.row]
         selectedRowData = item
         performSegue(withIdentifier: "ToEditItemVC", sender: self)
