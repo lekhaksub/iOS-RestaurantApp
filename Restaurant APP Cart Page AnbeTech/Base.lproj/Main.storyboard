@@ -24,19 +24,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3PP-Lb-g2R">
-                                <rect key="frame" x="16" y="770" width="203" height="24"/>
+                                <rect key="frame" x="16" y="770" width="183" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oC4-St-zea">
-                                <rect key="frame" x="227" y="754" width="150" height="50"/>
+                                <rect key="frame" x="207" y="754" width="170" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="TK6-Yd-Id3"/>
+                                    <constraint firstAttribute="width" constant="170" id="TK6-Yd-Id3"/>
                                     <constraint firstAttribute="height" constant="50" id="kVe-Qk-TzI"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Continue payment">
+                                <buttonConfiguration key="configuration" style="tinted" title="Continue Payment">
                                     <color key="baseForegroundColor" systemColor="systemGreenColor"/>
                                     <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
                                 </buttonConfiguration>
