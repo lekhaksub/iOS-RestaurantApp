@@ -9,6 +9,5 @@ https://drive.google.com/file/d/1pfApQUhhD8USmv-TbeOMPL-j7IivaEoV/view?usp=shari
 > Light Mode
 ![](https://github.com/lekhaksub/iOS-RestaurantApp/blob/main/Screenshots/Simulator%20Screenshot%20-%20iPhone%2014%20Pro%20-%202023-05-18%20at%2013.33.49.png)
 
-> DArk Mode
-
+> Dark Mode
 ![](https://github.com/lekhaksub/iOS-RestaurantApp/blob/main/Screenshots/Simulator%20Screenshot%20-%20iPhone%2014%20Pro%20-%202023-05-18%20at%2013.33.58.png)
